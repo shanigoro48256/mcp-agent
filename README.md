@@ -70,15 +70,28 @@ cd mcp-agent
 TAVILY_API_KEY=tvly-xxxxxxxx
 GITHUB_TOKEN=ghp_xxxxxxxxx
 
-LANGSMITH_TRACING=true
+LANGCHAIN_TRACING_V2=true
+LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
 LANGSMITH_API_KEY=ls__xxxxxxxx
 
-MYSQL_ROOT_PASSWORD=root_pass
-APP_USER=app_user
-APP_PASSWORD=app_pass
+# MySQL
+MYSQL_HOST=mysql
+MYSQL_PORT=3306
+MYSQL_USER=app_user
+MYSQL_PASSWORD=app_pass_change_me
+MYSQL_DATABASE=classicmodels
+MYSQL_ROOT_PASSWORD=root_pass_change_me
 
-OLLAMA_MODEL=qwen3:30b-a3b
+MYSQL_ROOT_USER=root
+APP_USER=app_user
+APP_PASSWORD=app_pass_change_me
+
+# Filesystem
+DEFAULT_FS_PATH=/app/mcp-demo/src/
+
+#Ollama
 OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=qwen3:30b-a3b
 ```
 
 ---
