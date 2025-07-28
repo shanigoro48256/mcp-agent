@@ -116,7 +116,7 @@ ollama pull qwen3:30b-a3b
 
 ---
 
-### MCP サーバー群を起動
+### MCPサーバー群を起動
 
 ```bash
 cd src
@@ -125,13 +125,15 @@ bash run_all.sh
 
 ---
 
-### 別ターミナルでクライアント実行
+### 別ターミナルでMCPクライアント実行
 
 ```bash
 docker exec -it mcp-agent /bin/bash
 cd src
 python mcp_client.py
 ```
+
+クライアントが起動したら、プロンプトに質問を入力することで、エージェントが応答を開始します。
 
 ---
 
