@@ -6,7 +6,24 @@
 MCPはFastMCPをベースに実装されており、AIエージェントはLangGraphを用いて構築されています。
 LLMにはローカル環境で動作する Qwen3-30B-A3B を Ollama を通じて使用しています。
 
-MCPサーバーのツール呼び出しは LangGraph の ReAct で制御されます。
+---
+
+## MCPホスト・クライアントの概要
+
+LangGraphベースのエージェントを「MCPホスト」、MCPサーバー群と接続するためのクライアントを「MCPクライアント」として実装しています。
+
+### MCPホスト（LangGraph エージェント）
+
+* LangGraphのReActエージェントとして構築され、LLMとMCPツールを組み合わせて実行します。
+* LLMにはローカル Ollama モデル（Qwen3-30B-A3B）を利用。
+* LangSmith によるトレース機能にも対応。
+
+### MCPクライアント（`MultiServerMCPClient`）
+
+* 各 MCP サーバー（search, rag, db, fs）と非同期に接続し、使用可能なツールを自動取得。
+* `mcp_client.py` の中で、LLM・ツール・エージェントの初期化からユーザー対話ループまでを一貫して処理。
+
+---
 
 ### MCPサーバー
 
