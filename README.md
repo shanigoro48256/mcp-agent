@@ -67,6 +67,10 @@ cd mcp-agent
 `.env` に以下を設定：
 
 ```dotenv
+#UTF-8
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+
 TAVILY_API_KEY=tvly-xxxxxxxx
 GITHUB_TOKEN=ghp_xxxxxxxxx
 
