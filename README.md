@@ -133,7 +133,17 @@ cd src
 python mcp_client.py
 ```
 
-クライアントが起動したら、プロンプトに質問を入力することで、エージェントが応答を開始します。
+> クライアントが起動したら、プロンプトに質問を入力することで、エージェントが応答を開始します。
+
+```bash
+root@6504cf879b88:/app/mcp-agent/src# python mcp_client.py
+[Tools] -> Loaded 33 tools from MCP servers
+MCP Agent Session: guest-a426a7da-177f-4ad8-a7b1-6279c783e029
+LangSmith Project: mcp-agent-bb17da02-9a0d-4003-8db4-924759c7f103
+終了するには 'exit' と入力してください。
+
+質問を入力:
+```
 
 ---
 
