@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-agent"
+version = "0.1.0"
+description = "mcp-agent"
+requires-python = ">=3.12"
+
+dependencies = [
+  "python-dotenv==1.1.1",
+  "fastmcp==2.10.1",
+  "langchain==0.3.24",
+  "langchain-community==0.3.21",
+  "langchain-core==0.3.55",
+  "langchain-huggingface==0.1.2",
+  "langchain-mcp-adapters==0.1.8",
+  "langchain-ollama==0.3.2",
+  "langgraph==0.5.1",
+  "mysql-connector-python==8.4.0",
+  "pandas==2.3.0",
+  "pydantic==2.11.7",
+  "readability-lxml==0.8.4.1",
+  "tavily-python==0.7.9",
+  "trafilatura==2.0.0",
+  "faiss-gpu-cu12",
+  "langsmith<0.4",
+  "langchain-mcp-adapters",
+]
+
+# [project.optional-depend
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  mcp-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mcp-agent
+    container_name: mcp-agent
+    runtime: nvidia
+    ports:
+      - "8888:8888"   # JupyterLab
+      - "11434:11434" # Ollama
+    volumes:
+      - .:/app/mcp-agent
+    working_dir: /app/mcp-agent
+    entrypoint: []
+    command: >
+      bash -c
+        '/usr/local/bin/ollama serve &
+        exec /app/.venv/bin/jupyter lab \
+          --ip="*" \
+          --port=8888 \
+          --no-browser \
+          --allow-root \
+          --NotebookApp.token="" \
+          --NotebookApp.password="" \
+          --notebook-dir=/app/mcp-agent'
+
+  mysql:
+    image: mysql:8.4
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root_pass_change_me
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      TZ: Asia/Tokyo
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+
+networks:
+  internal:
+    driver: bridge
+
