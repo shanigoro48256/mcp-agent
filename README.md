@@ -77,7 +77,7 @@ MYSQL_ROOT_PASSWORD=root_pass
 APP_USER=app_user
 APP_PASSWORD=app_pass
 
-OLLAMA_MODEL=qwen3:30b
+OLLAMA_MODEL=qwen3:30b-a3b
 OLLAMA_BASE_URL=http://localhost:11434
 ```
 
