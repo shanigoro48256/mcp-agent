@@ -2,7 +2,7 @@
 
 ---
 
-`mcp-agent` は、Model Context Protocol（MCP）に準拠した AI エージェント実装フレームワークです。
+`mcp-agent` は、Model Context Protocol（MCP）を使用したAI エージェントのデモ用コードです。
 MCPはFastMCPをベースに実装されており、AIエージェントはLangGraphを用いて構築されています。
 LLMにはローカル環境で動作する Qwen3-30B-A3B を Ollama を通じて使用しています。
 
