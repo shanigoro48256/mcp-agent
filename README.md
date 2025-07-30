@@ -91,7 +91,7 @@ APP_USER=app_user
 APP_PASSWORD=app_pass_change_me
 
 # Filesystem
-DEFAULT_FS_PATH=/app/mcp-demo/src/
+DEFAULT_FS_PATH=/app/mcp-agent/src/
 
 #Ollama
 OLLAMA_BASE_URL=http://localhost:11434
