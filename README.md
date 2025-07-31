@@ -152,3 +152,22 @@ LangSmith Project: mcp-agent-bb17da02-9a0d-4003-8db4-924759c7f103
 NVIDIA A100 40GB または 80GB での動作確認を行っています。
 
 ---
+
+## License
+
+This project is licensed under the **MIT License**.
+Copyright (c) 2025 shanigoro48256
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+> The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+>
+> THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+> IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+### サードパーティ製コンポーネントについて
+
+本プロジェクトで使用する外部ライブラリ、モデル、フレームワーク等については、それぞれの元のライセンスに従ってご利用ください。
+各コンポーネントのライセンス情報は、該当する公式のドキュメントをご参照ください。
+
+---
